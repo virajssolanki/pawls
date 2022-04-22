@@ -117,7 +117,9 @@ async def get_pdf(sha: str):
         The sha of the pdf to return.
     """
     pdf = os.path.join(configuration.output_directory, sha, f"{sha}.pdf")
+    print(pdf, "bitch")
     pdf_exists = os.path.exists(pdf)
+    print(pdf_exists, "never hear mf")
     if not pdf_exists:
         raise HTTPException(status_code=404, detail=f"pdf {sha} not found.")
 

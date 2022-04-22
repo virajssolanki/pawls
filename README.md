@@ -97,14 +97,7 @@ There's a special case when an allowed email address in this file starts with
 "@", meaning all users in that domain are allowed. That is, an entry
 "@allenai.org" will grant access to all AI2 people.
 
-Look at the function `user_is_allowed` in [main.py](api/main.py) for details.
-
-### Python Development
-
-The Python service and Python cli are formatted using `black` and `flake8`. Currently this is run in a local environment
-using the app's `requirements.txt`. To run the linters:
-
-```
+Look at the function `user_is_allowepawls assign skiff_files/apps/pawls/papers development_user@example.com --all
 black api/
 flake8 api/
 ```
@@ -197,3 +190,11 @@ To fix this, run this command from the root of the repository:
 ---
 
 PAWLS is an open-source project developed by [the Allen Institute for Artificial Intelligence (AI2)](http://www.allenai.org). AI2 is a non-profit institute with the mission to contribute to humanity through high-impact AI research and engineering.
+
+sudo docker-compose up --build
+
+pawls preprocess ocr skiff_files/apps/pawls/papers
+
+pawls assign skiff_files/apps/pawls/papers development_user@example.com --all
+
+pawls export skiff_files/apps/pawls/papers skiff_files/configuration.json  skiff_files/apps/pawls/papers token
